@@ -3,7 +3,11 @@ import {
     StyleSheet,
     Text,
     View,
+    VrButton,
+    NativeModules,
+    asset
 } from 'react-360';
+const { AudioModule } = NativeModules;
 
 export default class Panel extends React.Component {
     render() {
@@ -13,6 +17,16 @@ export default class Panel extends React.Component {
                     <Text style={styles.greeting}>
                         R2D2
                     </Text>
+                    <VrButton
+                        onClick={() => {
+                            AudioModule.playOneShot({
+                                source: asset('r2d2.mp3'),
+                            });
+                        }}>
+                        <Text>
+                            Play Message
+                        </Text>
+                    </VrButton>
                 </View>
             </View>
         );
