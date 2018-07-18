@@ -1,43 +1,9 @@
 import React from 'react';
+import Panel from './Panel';
+
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
+  AppRegistry
 } from 'react-360';
 
-export default class react360 extends React.Component {
-  render() {
-    return (
-      <View style={styles.panel}>
-        <View style={styles.greetingBox}>
-          <Text style={styles.greeting}>
-            Hello World!!
-          </Text>
-        </View>
-      </View>
-    );
-  }
-};
 
-const styles = StyleSheet.create({
-  panel: {
-    // Fill the entire surface
-    width: 1000,
-    height: 600,
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  greetingBox: {
-    padding: 20,
-    backgroundColor: '#000000',
-    borderColor: 'red',
-    borderWidth: 2,
-  },
-  greeting: {
-    fontSize: 30,
-  },
-});
-
-AppRegistry.registerComponent('react360', () => react360);
+AppRegistry.registerComponent('Panel', () => Panel);
